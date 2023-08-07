@@ -1,7 +1,7 @@
 # Machine Learning Topics
 
-This repository is my Python and machine learning playground, I use it to save some results of my experiments with
-machine learning algorithms.
+This repository is my playground for machine learning related topics. I use it to save some results of my experiments
+with Python and machine learning algorithms.
 
 I hope you find something useful here.. 🙂
 
