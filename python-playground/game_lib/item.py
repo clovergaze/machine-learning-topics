@@ -1,6 +1,7 @@
 class Item:
-    def __init__(self, name, category, value, weight, condition=100.0):
+    def __init__(self, name, description, category, value, weight, condition=100.0):
         self.name = name
+        self.description = description
         self.category = category
         self.value = value
         self.weight = weight
@@ -14,6 +15,7 @@ class Item:
 
     def print(self):
         print("Name: " + self.name)
+        print("Description: " + self.description)
         print("Category: " + self.category.value)
         print("Value: " + str(self.value))
         print("Weight: " + str(self.weight))
