@@ -7,19 +7,17 @@ class Character:
         self.inventory = inventory if inventory is not None else Inventory()
         self.health = health
 
-    def increase_health(self, amount):
-        self.health += amount
-        if self.health > 100:
-            self.health = 100
-
     def decrease_health(self, amount):
         self.health -= amount
         if self.health < 0:
             self.health = 0
 
-    def print(self):
-        print("Name: " + self.name)
+    def increase_health(self, amount):
+        self.health += amount
+        if self.health > 100:
+            self.health = 100
 
+    def describe_health(self):
         if self.health > 95:
             verbatim = "excellent"
         elif self.health > 75:
@@ -33,6 +31,10 @@ class Character:
         else:
             verbatim = "dead"
 
-        print("Health: " + verbatim + " (" + str(self.health) + "%)")
+        return verbatim + " (" + str(self.health) + "%)"
+
+    def print(self):
+        print("Name: " + self.name)
+        print("Health: " + self.describe_health())
         print()
         self.inventory.print()

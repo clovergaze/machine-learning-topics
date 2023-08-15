@@ -13,13 +13,7 @@ class Item:
     def repair_condition(self):
         self.condition = 100.0
 
-    def print(self):
-        print("Name: " + self.name)
-        print("Description: " + self.description)
-        print("Category: " + self.category.value)
-        print("Value: " + str(self.value))
-        print("Weight: " + str(self.weight))
-
+    def describe_condition(self):
         if self.condition > 95.0:
             verbatim = "excellent"
         elif self.condition > 75.0:
@@ -33,4 +27,12 @@ class Item:
         else:
             verbatim = "broken"
 
-        print("Condition: " + verbatim + " (" + str(self.condition) + "%)")
+        return verbatim + " (" + str(self.condition) + "%)"
+
+    def print(self):
+        print("Name: " + self.name)
+        print("Description: " + self.description)
+        print("Category: " + self.category.value)
+        print("Value: " + str(self.value))
+        print("Weight: " + str(self.weight))
+        print("Condition: " + self.describe_condition())
