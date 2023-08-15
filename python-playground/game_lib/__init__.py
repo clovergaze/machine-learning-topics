@@ -1,4 +1,7 @@
 # noinspection PyUnresolvedReferences
+from .basic_items import BASIC_ITEMS
+
+# noinspection PyUnresolvedReferences
 from .category import Category
 
 # noinspection PyUnresolvedReferences
