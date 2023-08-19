@@ -1,8 +1,11 @@
+import uuid
+
 from .inventory import Inventory
 
 
 class Character:
     def __init__(self, name, health=100, inventory=None):
+        self.id = uuid.uuid4()
         self.name = name
         self.inventory = inventory if inventory is not None else Inventory()
         self.health = health

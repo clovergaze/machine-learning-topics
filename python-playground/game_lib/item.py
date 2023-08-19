@@ -1,5 +1,9 @@
+import uuid
+
+
 class Item:
     def __init__(self, name, description, category, value, weight, condition=100.0):
+        self.id = uuid.uuid4()
         self.name = name
         self.description = description
         self.category = category

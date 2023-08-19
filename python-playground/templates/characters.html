@@ -7,7 +7,7 @@
     <ul>
         {% for character in characters %}
             <li>
-                <a href="characters/{{ character.name | lower | urlencode }}">{{ character.name }}</a>
+                <a href="characters/{{ character.id }}">{{ character.name }}</a>
             </li>
         {% endfor %}
     </ul>
