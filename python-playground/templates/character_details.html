@@ -13,6 +13,10 @@
         <td>{{ character.describe_health() }}</td>
     </tr>
     <tr>
+        <td>Gold:</td>
+        <td>{{ character.inventory.gold.amount }}</td>
+    </tr>
+    <tr>
         <td>Inventory:</td>
         <td>
             {% if character.inventory.items %}
