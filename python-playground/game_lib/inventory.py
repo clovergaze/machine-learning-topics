@@ -16,12 +16,6 @@ class Inventory:
             raise ValueError("Item not in inventory")
         self.items.remove(item)
 
-    def add_gold(self, amount):
-        self.gold.add_amount(amount)
-
-    def remove_gold(self, amount):
-        self.gold.remove_amount(amount)
-
     def print(self, category=None):
         print("Inventory")
         print("=========")
