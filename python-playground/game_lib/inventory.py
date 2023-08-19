@@ -2,7 +2,7 @@ from .gold import Gold
 
 
 class Inventory:
-    def __init__(self, items=None, gold_amount=0.0):
+    def __init__(self, items=None, gold_amount=0):
         self.items = items if items is not None else []
         self.gold = Gold(gold_amount)
 

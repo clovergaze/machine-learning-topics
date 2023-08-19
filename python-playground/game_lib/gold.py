@@ -7,7 +7,7 @@ class Gold:
         if amount < 0:
             raise ValueError("Amount must be positive")
 
-    def __init__(self, amount=0.0):
+    def __init__(self, amount=0):
         Gold._validate_amount_is_positive(amount)
 
         self.name = "Gold"
