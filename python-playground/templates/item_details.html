@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Item Details</h2>
+<table>
+    <tr>
+        <td>Name:</td>
+        <td>{{ item.name }}</td>
+    </tr>
+    <tr>
+        <td>Description:</td>
+        <td>{{ item.description }}</td>
+    </tr>
+    <tr>
+        <td>Category:</td>
+        <td>{{ item.category.value }}</td>
+    </tr>
+    <tr>
+        <td>Value:</td>
+        <td>{{ item.value }}</td>
+    </tr>
+    <tr>
+        <td>Weight:</td>
+        <td>{{ item.weight }}</td>
+    </tr>
+    <tr>
+        <td>Condition:</td>
+        <td>{{ item.describe_condition() }}</td>
+    </tr>
+</table>
+
+{% endblock %}

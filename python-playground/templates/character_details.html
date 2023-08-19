@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Character Details</h2>
+<table>
+    <tr>
+        <td>Name:</td>
+        <td>{{ character.name }}</td>
+    </tr>
+    <tr>
+        <td>Health:</td>
+        <td>{{ character.describe_health() }}</td>
+    </tr>
+    <tr>
+        <td>Inventory:</td>
+        <td>
+            {% if character.inventory.items %}
+                [{{ character.inventory.items | map(attribute='name') | join(", ") }}]
+            {% else %}
+                None
+            {% endif %}
+        </td>
+    </tr>
+</table>
+
+{% endblock %}

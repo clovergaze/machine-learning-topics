@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Items</h2>
+{% if items %}
+    <ul>
+        {% for item in items %}
+            <li>
+                <a href="items/{{ item.name | lower | urlencode }}">{{ item.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No items found.</p>
+{% endif %}
+
+{% endblock %}

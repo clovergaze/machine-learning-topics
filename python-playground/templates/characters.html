@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Characters</h2>
+{% if characters %}
+    <ul>
+        {% for character in characters %}
+            <li>
+                <a href="characters/{{ character.name | lower | urlencode }}">{{ character.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No characters found.</p>
+{% endif %}
+
+{% endblock %}
