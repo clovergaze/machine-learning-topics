@@ -14,7 +14,11 @@
     </tr>
     <tr>
         <td>Gold:</td>
-        <td>{{ character.inventory.gold.amount }}</td>
+        <td id="gold-amount">{{ character.inventory.gold.amount }}</td>
+        <td>
+            <button onclick="modifyGold('{{ character.id }}', ACTION_ADD)">+</button>
+            <button onclick="modifyGold('{{ character.id }}', ACTION_REMOVE)">-</button>
+        </td>
     </tr>
     <tr>
         <td>Inventory:</td>
@@ -27,5 +31,7 @@
         </td>
     </tr>
 </table>
+
+<script src="{{ url_for('static', filename='modify-gold.js') }}"></script>
 
 {% endblock %}
